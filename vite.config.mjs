@@ -238,6 +238,15 @@ export default defineConfig(async ({ mode }) => {
       },
       rollupOptions: {
         plugins: rollupPlugins,
+        external: [
+          '@fortawesome/fontawesome-svg-core',
+          '@fortawesome/pro-duotone-svg-icons',
+          '@fortawesome/pro-light-svg-icons',
+          '@fortawesome/pro-regular-svg-icons',
+          '@fortawesome/pro-solid-svg-icons',
+          '@fortawesome/pro-thin-svg-icons',
+          '@fortawesome/react-fontawesome'
+        ]
       },
       minify: 'terser',
       outDir: path.resolve(_dirname, 'heroku/static'),
